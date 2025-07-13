@@ -34,6 +34,7 @@ class Task(Base):
     data_json: Mapped[dict[str, Any]] = mapped_column(JSON)
 
     ai_pred: Mapped[Optional[str]]
+    answer: Mapped[Optional[str]]
 
     file_key_1: Mapped[Optional[str]]
     file_key_2: Mapped[Optional[str]]

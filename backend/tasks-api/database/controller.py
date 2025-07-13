@@ -57,3 +57,9 @@ async def insert_prediction_into_task(session: AsyncSession, task_id: int, predi
     await TaskDAO.update_one_by_id(session=session, data_id=task_id, values=TaskFilterModel(
         ai_pred=prediction
     ))
+
+@connection(commit=True)
+async def insert_answer_into_task(session: AsyncSession, task_id: int, answer: str):
+    await TaskDAO.update_one_by_id(session=session, data_id=task_id, values=TaskFilterModel(
+        answer=answer
+    ))

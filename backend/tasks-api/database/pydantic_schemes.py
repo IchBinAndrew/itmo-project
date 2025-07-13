@@ -11,6 +11,7 @@ class TaskModel(BaseModel):
     data_json: dict[str, Any]
 
     ai_pred: Optional[str] = None
+    answer: Optional[str] = None
 
     file_key_1: Optional[str]
     file_key_2: Optional[str]
@@ -25,6 +26,7 @@ class TaskFilterModel(BaseModel):
     data_json: Optional[dict[str, Any]] = None
 
     ai_pred: Optional[str] = None
+    answer: Optional[str] = None
 
     file_key_1: Optional[str] = None
     file_key_2: Optional[str] = None
